@@ -1,38 +1,143 @@
-css
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  color: #222;
   margin: 0;
-  padding: 0;
-}
-.container {
-  max-width: 400px;
-  padding: 2rem;
-  margin: 2rem auto;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-  text-align: center;
-}
-#qr-code, #qr-reader {
-  margin: 1rem auto;
-}
-input[type="text"] {
-  width: 70%;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  margin: 0.5rem 0;
-}
-button {
-  padding: 0.5rem 1.5rem;
-  border: none;
-  background: #1abc9c;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-  border-radius: 5px;
+}
+
+.app {
+  width: 360px;
+  background: rgba(0,0,0,0.25);
+  padding: 20px;
+  border-radius: 20px;
+}
+.aether-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75); /* light text */
+  
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  padding: 12px 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  transition: all 0.35s ease;
   cursor: pointer;
 }
+
+/* Hover / Touch Effect */
+.aether-title:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.4),
+    0 0 30px rgba(255, 255, 255, 0.15);
+
+  transform: scale(1.05);
+}
+.weather-card{
+  box-shadow: 0 25px 60 px rgba(0,0,0,0.35);
+}
+.weather-card:hover {
+  transform: translateY(-6px);
+}
+header{
+ text-align: center;
+}
+
+.search-btn:hover{
+  background: #ffcf33;
+  box-shadow: 0 6px 20px rgba(225, 207, 51, 0.5);
+  transform: translateY(-2px);
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: gold;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card {
+  margin-top: 20px;
+  text-align: center;
+}
+button, .weather-card {
+  transition: all 0.3s ease;
+}
+
 button:hover {
-  background: #16a085;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 200, 0, 0.4);
+}
+.icon {
+  font-size: 64px;
+  margin: 10px 0;
+}
+
+.animated {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.temps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.forecast {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.day {
+  min-width: 80px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.day span {
+  display: block;
+}
+
+.alert {
+  background: crimson;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }

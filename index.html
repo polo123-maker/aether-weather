@@ -1,30 +1,40 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QR Code Scanner & Generator</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- QR generation library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <!-- QR scanning library -->
-  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Forecast App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>QR Code Generator</h1>
-    <input type="text" id="qr-input" placeholder="Enter text or URL"/>
-    <button onclick="generateQRCode()">Generate QR Code</button>
-    <div id="qr-code"></div>
 
-    <h1>QR Code Scanner</h1>
-    <div id="qr-reader" style="width: 300px"></div>
-    <div>
-      <strong>Scanned Result:</strong>
-      <span id="scan-result"></span>
-    </div>
-  </div>
+  <main class="app">
+    <header>
+      <h1 class="aether-title">AEther</h1>
+      <div class="search">
+        <input type="text" id="locationInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+
+    <!-- Current Weather -->
+    <section id="currentWeather" class="card hidden">
+      <h2 id="cityName"></h2>
+      <div id="weatherIcon" class="icon animated"></div>
+      <p id="conditionText"></p>
+      <div class="temps">
+        <span>🌞 <b id="dayTemp"></b>°C</span>
+        <span>🌙 <b id="nightTemp"></b>°C</span>
+      </div>
+    </section>
+
+    <!-- 7 Day Forecast -->
+    <section id="forecast" class="forecast hidden"></section>
+
+    <!-- Alerts -->
+    <section id="alertBox" class="alert hidden"></section>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
