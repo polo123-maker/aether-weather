@@ -16,7 +16,7 @@ real-time weather updates using a clean glassmorphism UI.
 - Weather API
 
 ## 🚀 Live Demo
-  https://github.com/polo123-maker/aether-weather.git
+[Live demo](https://github.com/polo123-maker/aether-weather.git)
 
 ## 📌 Author
 Poulami Mondal
